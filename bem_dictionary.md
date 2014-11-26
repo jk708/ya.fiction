@@ -16,9 +16,9 @@
 | **Валидация файла** | Процесс определения актуальности файла при сборке. | [Модули технологий](http://ru.bem.info/tools/bem/bem-tools/tech-modules/#Валидация-файлов-при-последующих-сборках) |
 | **Декларация** | Структура страницы, описанная в терминах блоков, элементов и модификаторов. | [О структуре проекта](http://ru.bem.info/tutorials/start-with-project-stub/#Кратко-о-структуре-проекта) |
 | **Динамическая сборка** | Предварительная сборка статических файлов (CSS, JS, шаблоны), с последующим формированием в runtime динамического БЭМ-дерева, на которое накладываются шаблоны. | [Зависимости](http://ru.bem.info/tools/bem/bem-tools/depsjs/) |
-| **Живая инициализация** | См. **Ленивая инициализация** |  |
-| **Заморозка** | Процесс преобразования URL до файла, при котором URL заменяется на хеш от контента файла. | [borschik](http://ru.bem.info/articles/borschik/#«Заморозка»-статических-ресурсов--freeze-) |
-| **Ленивая инициализация** | Запуск инициализации JS-объектов только в тот момент, когда их функциональность требуется пользователю: например, по клику на блоке. | [Ленивая инициализация](http://ru.bem.info/tutorials/bem-js-tutorial/03-live-initialization/) |
+| **Живая инициализация** | См. [Ленивая инициализация](#live) |  |
+| <a name="freeze"></a>**Заморозка** | Процесс преобразования URL до файла, при котором URL заменяется на хеш от контента файла. | [borschik](http://ru.bem.info/articles/borschik/#«Заморозка»-статических-ресурсов--freeze-) |
+| <a name="live"></a>**Ленивая инициализация** | Запуск инициализации JS-объектов только в тот момент, когда их функциональность требуется пользователю: например, по клику на блоке. | [Ленивая инициализация](http://ru.bem.info/tutorials/bem-js-tutorial/03-live-initialization/) |
 | **Микс** | Техника размещения нескольких блоков на одном HTML-элементе. | [i-bem.js](http://ru.bem.info/technology/i-bem/2.3.0/i-bem-js/#Один-HTML-элемент-—-несколько-JS-блоков) |
 | **Мода** | Ряд фаз, проходимый циклом генерации каждого элемента. | [BEMHTML](http://ru.bem.info/technology/bemhtml/2.3.0/reference/#Мода) |
 | **Модификатор** | Свойство блока или элемента, которое меняет его внешний вид или поведение. | [Модифицируемость блоков](http://ru.bem.info/method/definitions/#Модифицируемость-блоков) |
@@ -37,6 +37,51 @@
 |  |  |  |
 |  |  |  |
 | **API технологии** | Набор методов для работы с технологиями, общий для всех подпрограмм пакета `bem-tools` и модулей технологий. | [Модули технологий](http://ru.bem.info/tools/bem/bem-tools/tech-modules/#Особенности-архитектуры-пакета-bem-tools) |
-| **Freeze** | См. **Заморозка** |  |
-| **Live-инициализация** | См. **Ленивая инициализация** |  |
+| **Freeze** | См. [Заморозка](#freeze) |  |
+| **Live-инициализация** | См. [Ленивая инициализация](#live) |  |
 | **Merged-бандл** | Бандл, который объединяет в себе декларации всех бандлов уровня. | [Сборка merged-бандла](http://ru.bem.info/tools/bem/bem-tools/customization/#Сборка-`merged`-бандла--раньше-так-же-назывался-`common`-) |
+
+## Инструментарий БЭМ
+
+Краткое описание собственных инструментов, библиотек и технологий платформы БЭМ.
+
+| Название | Определение |
+| ----------- | ------ |
+| [BEMHTML](http://ru.bem.info/technology/bemhtml/current/intro/) | Шаблонный движок для веб-разработки в рамках БЭМ-методологии. |
+| <a name="bemjson"></a>[BEMJSON](http://ru.bem.info/technology/bemjson/current/bemjson/) | Cтруктура данных (объект) JavaScript, с набором дополнительных соглашений о представлении БЭМ-сущностей. |
+| [BEMTREE](http://ru.bem.info/technology/bemtree/current/bemtree/) | [BEM-XJST](#bemxjst)-шаблонизатор. |
+| [BH](http://ru.bem.info/technology/bh/) | [BEMJSON](#bemjson)-процессор, который превращает BEMJSON в HTML. |
+| [bem-bl](http://ru.bem.info/libs/bem-bl/) | Расширенная библиотека, которая помимо базовых вариантов блоков включает реализации некоторых универсальных решений для меню, текста, логотипа, поисковой строки, таблиц и т.д. |
+| [bem-components](http://ru.bem.info/libs/bem-components/) | Библиотека блоков, предоставляющая готовые элементы управления форм и некоторые другие блоки. |
+| [bem-core](http://ru.bem.info/libs/bem-core/) | Базовая библиотека блоков для разработки веб-интерфейсов, cодержащая только необходимый минимум для разработки клиентского JS и HTML-шаблонов. |
+| [bem-history](http://ru.bem.info/libs/bem-history/) | БЭМ-обертка над History API. |
+| [bem-mvc](http://ru.bem.info/libs/bem-mvc/) | Набор `i-bem`-блоков для реализации MVC-паттерна, предоставляющий API для работы с моделями и блоки для автоматического провязывания моделей с интерфейсом. |
+| [bem-naming](http://ru.bem.info/tools/bem/bem-naming/) | Инструмент, позволяющий получать информацию о БЭМ-сущности по строке, а также формировать строковое представление на основе БЭМ-нотации. |
+| <a name="bemxjst"></a>[bem-tools](http://ru.bem.info/tools/bem/bem-tools/) | Набор инструментов для работы с файлами по БЭМ-методологии. |
+| [bem-tools-autoprefixer](http://ru.bem.info/tools/bem/autoprefixer/) | Расширение для [bem-tools](#bem-tools), использующее [autoprefixer](http://ru.bem.info/tools/bem/autoprefixer/) во время процесса сборки. |
+| <a name="bemxjst"></a>[BEM-XJST](http://ru.bem.info/tools/templating-engines/bemxjst/) | Компилятор БЭМ-специфичных шаблонов, основанный на [XJST](#XJST). |
+| [borschik](http://ru.bem.info/tools/optimizers/borschik/) | Расширяемый сборщик файлов текстовых форматов, основная задача которого - сборка статических файлов веб-проектов (CSS, JS и т.д.). |
+| [bower-npm-install](http://ru.bem.info/tools/bem/bower-npm-install/) | Инструмент для запуска команды `npm install` для всех зависимостей [bower](http://bower.io/). |
+| [CCSO](http://ru.bem.info/tools/optimizers/csso/) (CSS Optimizer) | Минимизатор CSS, выполняющий как минимизацию без изменения структуры, так и структурную минимизацию с целью получить как можно меньший текст. |
+| <a name="enb"></a>[ENB](http://enb-make.info/) | Сборщик проектов, построенных на модели `node`/`target`. |
+| [enb-bemxjst](http://ru.bem.info/tools/bem/enb-bemxjst/) | Поддержка технологий, базирующихся на основе [BEM-XJST](#bemxjst), для [ENB](#enb). |
+| [enb-bem-docs](http://ru.bem.info/tools/bem/enb-bem-docs/) | Модуль создания документации для [ENB](#enb). |
+| [enb-bem-examples](http://ru.bem.info/tools/bem/enb-bem-examples/) | Инструмент для генерации сетов из примеров БЭМ-блоков с помощью [ENB](#enb). |
+| [enb-bem-pseudo-levels](http://ru.bem.info/tools/bem/enb-bem-pseudo-levels/) | Инструмент для манипуляции уровнями переопределений для [ENB](#enb), позволяющий создавать уровни на основе уже существующих. |
+| [enb-bem-specs](http://ru.bem.info/tools/bem/enb-bem-specs/) | Инструмент, используемый [ENB](#enb) для сборки и запуска тестов (спеков) на клиентский JavaScript. |
+| [enb-bem-techs](http://ru.bem.info/tools/bem/enb-bem-techs/) | Пакет предоставляет набор базовых технологий для сборки проектов, в основе которых лежит БЭМ-методология, с помощью [ENB](#enb). |
+| [enb-bem-tmpl-specs](http://ru.bem.info/tools/bem/enb-bem-tmpl-specs/) | Инструмент для сборки и запуска тестов на шаблоны в [ENB](#enb). |
+| [enb-bh](http://ru.bem.info/tools/bem/enb-bh/) | Поддержка [BH](#bh) для [ENB](#enb). |
+| [enb-xjst](http://ru.bem.info/tools/bem/enb-xjst/) | Поддержка технологий на основе [XJST](#XJST) в [ENB](#enb). |
+| [Gemini](http://ru.bem.info/tools/testing/gemini/) | Утилита для регрессионного тестирования отображения веб-страниц. |
+| [generator-bem-stub](http://ru.bem.info/tools/bem/bem-stub/) | Генератор БЭМ-проектов на [Yeoman](http://yeoman.io/). |
+| [Gonzales](https://github.com/css/gonzales) | Быстрый парсер CSS, основанный на идеологии PEG. |
+| [html-differ](http://ru.bem.info/tools/testing/html-differ/) | Инструмент для сравнения HTML-документов. |
+| [i-bem.js](http://ru.bem.info/technology/i-bem/2.3.0/i-bem-js/) | Специализированный JavaScript-фреймворк для веб-разработки в рамках БЭМ-методологии. |
+| [OmetaJS](https://github.com/veged/ometa-js#ometajs-) | JavaScript-версия объектно-ориентированного языка OMeta. |
+| [project-stub](https://github.com/bem/project-stub) | Шаблонный репозиторий используемый для создания БЭМ-проектов. |
+| [setochka](https://github.com/afelix/setochka) | Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. |
+| [Shmakowiki](https://github.com/veged/shmakowiki) | Вариация формата wiki-разметки. |
+| [SVGO](http://ru.bem.info/tools/optimizers/svgo/svgo/) | Инструмент для оптимизации векторной графики в формате SVG, написанный на Node.js. |
+| <a name="xjst"></a>[XJST](http://bem.info/tools/templating-engines/xjst/) | Низкоуровневый JS-шаблонизатор. |
+| [YModules](http://ru.bem.info/tools/bem/modules/) | Модульная система. |
