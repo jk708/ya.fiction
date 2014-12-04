@@ -56,9 +56,9 @@
 | [bem-history](http://ru.bem.info/libs/bem-history/) | БЭМ-обертка над History API. |
 | [bem-mvc](http://ru.bem.info/libs/bem-mvc/) | Набор `i-bem`-блоков для реализации MVC-паттерна, предоставляющий API для работы с моделями и блоки для автоматического провязывания моделей с интерфейсом. |
 | [bem-naming](http://ru.bem.info/tools/bem/bem-naming/) | Инструмент, позволяющий получать информацию о БЭМ-сущности по строке, а также формировать строковое представление на основе БЭМ-нотации. |
-| <a name="bemxjst"></a>[bem-tools](http://ru.bem.info/tools/bem/bem-tools/) | Набор инструментов для работы с файлами по БЭМ-методологии. |
+| <a name="bem-tools"></a>[bem-tools](http://ru.bem.info/tools/bem/bem-tools/) | Набор инструментов для работы с файлами по БЭМ-методологии. |
 | [bem-tools-autoprefixer](http://ru.bem.info/tools/bem/autoprefixer/) | Расширение для [bem-tools](#bem-tools), использующее [autoprefixer](http://ru.bem.info/tools/bem/autoprefixer/) во время процесса сборки. |
-| <a name="bemxjst"></a>[BEM-XJST](http://ru.bem.info/tools/templating-engines/bemxjst/) | Компилятор БЭМ-специфичных шаблонов, основанный на [XJST](#XJST). |
+| <a name="bemxjst"></a>[BEM-XJST](http://ru.bem.info/tools/templating-engines/bemxjst/) | Компилятор БЭМ-специфичных шаблонов, основанный на [XJST](#xjst). |
 | [borschik](http://ru.bem.info/tools/optimizers/borschik/) | Расширяемый сборщик файлов текстовых форматов, основная задача которого - сборка статических файлов веб-проектов (CSS, JS и т.д.). |
 | [bower-npm-install](http://ru.bem.info/tools/bem/bower-npm-install/) | Инструмент для запуска команды `npm install` для всех зависимостей [bower](http://bower.io/). |
 | [CCSO](http://ru.bem.info/tools/optimizers/csso/) (CSS Optimizer) | Минимизатор CSS, выполняющий как минимизацию без изменения структуры, так и структурную минимизацию с целью получить как можно меньший текст. |
