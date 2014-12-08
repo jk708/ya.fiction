@@ -77,7 +77,7 @@
 | [Gonzales](https://github.com/css/gonzales) | Быстрый парсер CSS. |
 | [html-differ](http://ru.bem.info/tools/testing/html-differ/) | Инструмент для сравнения HTML-документов. |
 | <a name="i-bem"></a>[i-bem.js](http://ru.bem.info/technology/i-bem/2.3.0/i-bem-js/) | Специализированный JavaScript-фреймворк для веб-разработки в рамках БЭМ-методологии. |
-| [OmetaJS](https://github.com/veged/ometa-js#ometajs-) | JavaScript-версия объектно-ориентированного языка OMeta. |
+| [OmetaJS](https://github.com/veged/ometa-js#ometajs-) | JavaScript-версия объектно-ориентированного языка [OMeta](http://tinlizzie.org/ometa/). |
 | [project-stub](https://github.com/bem/project-stub) | Шаблонный репозиторий используемый для создания БЭМ-проектов. |
 | [setochka](https://github.com/afelix/setochka) | Инструмент для выделения CSS-свойств исходного CSS в отдельные файлы. |
 | [Shmakowiki](https://github.com/veged/shmakowiki) | Вариация формата wiki-разметки. |
